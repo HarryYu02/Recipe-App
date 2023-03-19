@@ -1,15 +1,9 @@
 import { useState, useEffect } from "react";
-import {
-    Box,
-    Stack,
-    Typography,
-    IconButton,
-    DataGrid,
-    GridColDef,
-    GridRowsProp,
-} from "@pankod/refine-mui";
-import { useGetIdentity, useOne } from "@pankod/refine-core";
-import { useNavigate } from "@pankod/refine-react-router-v6";
+import { GridColDef, GridRowsProp } from "@mui/x-data-grid";
+import { DataGrid } from "@mui/x-data-grid";
+import { Box, Stack, Typography, IconButton } from "@mui/material";
+import { useGetIdentity, useOne } from "@refinedev/core";
+import { useNavigate } from "react-router-dom";
 import { Shortcut } from "@mui/icons-material";
 import dayjs, { Dayjs } from "dayjs";
 
@@ -34,7 +28,9 @@ const columns: GridColDef[] = [
 const Home = () => {
     const [viewDate, setViewDate] = useState<Dayjs | null>(null);
     const navigate = useNavigate();
-    const { data: user } = useGetIdentity();
+    const { data: user } = useGetIdentity({
+        v3LegacyAuthProviderCompatible: true
+    });
     const { data, isLoading, isError } = useOne({
         resource: "users",
         id: user?.userId,

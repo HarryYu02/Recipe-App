@@ -1,5 +1,5 @@
 import { Email, BookOutlined, } from "@mui/icons-material";
-import { Box, Stack, Typography } from "@pankod/refine-mui";
+import { Box, Stack, Typography } from "@mui/material";
 
 import { ProfileProps, RecipeProps } from "interfaces/common";
 import RecipeCard from './RecipeCard';

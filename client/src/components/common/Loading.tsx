@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, CircularProgress } from "@pankod/refine-mui";
+import { Box, CircularProgress } from "@mui/material";
 
 function Loading() {
     return (

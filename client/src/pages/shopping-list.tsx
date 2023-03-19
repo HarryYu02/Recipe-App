@@ -1,18 +1,8 @@
 import { useEffect, useState, useMemo } from "react";
-import { useGetIdentity, useOne, useUpdate } from "@pankod/refine-core";
-import {
-    Box,
-    Typography,
-    Stack,
-    DataGrid,
-    GridRowsProp,
-    GridColDef,
-    GridSelectionModel,
-    ListItem,
-    TextField,
-    FormControl,
-    GridEditCellValueParams,
-} from "@pankod/refine-mui";
+import { useGetIdentity, useOne, useUpdate } from "@refinedev/core";
+import { GridColDef, GridRowsProp } from "@mui/x-data-grid";
+import { DataGrid, GridSelectionModel } from "@mui/x-data-grid";
+import { Box, Typography, Stack, ListItem, TextField, FormControl } from "@mui/material";
 import { Add, Delete } from "@mui/icons-material";
 
 import { LocalizationProvider } from "@mui/x-date-pickers";
@@ -74,7 +64,9 @@ function ShoppingList() {
         []
     );
     const { mutate: update } = useUpdate();
-    const { data: user } = useGetIdentity();
+    const { data: user } = useGetIdentity({
+        v3LegacyAuthProviderCompatible: true
+    });
     const { data, isLoading, isError } = useOne({
         resource: "users",
         id: user?.userId,

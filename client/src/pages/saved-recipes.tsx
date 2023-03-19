@@ -1,21 +1,15 @@
 import React from "react";
-import { useGetIdentity, useOne } from "@pankod/refine-core";
-import {
-    Box,
-    Stack,
-    Typography,
-    TextField,
-    Select,
-    MenuItem,
-    CircularProgress,
-} from "@pankod/refine-mui";
-import { useNavigate } from "@pankod/refine-react-router-v6";
+import { useGetIdentity, useOne } from "@refinedev/core";
+import { Box, Stack, Typography, TextField, Select, MenuItem, CircularProgress } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 import { RecipeCard, CustomButton, Loading } from "components";
 import { RecipeProps } from "interfaces/common";
 
 const SavedRecipes = () => {
-    const { data: user } = useGetIdentity();
+    const { data: user } = useGetIdentity({
+        v3LegacyAuthProviderCompatible: true
+    });
     const { data, isLoading, isError } = useOne({
         resource: "users",
         id: user?.userId,

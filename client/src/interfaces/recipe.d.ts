@@ -1,4 +1,4 @@
-import { BaseKey } from "@pankod/refine-core";
+import { BaseKey } from "@refinedev/core";
 import { Ingredient } from "./common";
 
 export interface RecipeCardProps {

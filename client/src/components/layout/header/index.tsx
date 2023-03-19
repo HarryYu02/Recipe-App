@@ -1,13 +1,6 @@
 import React, { useContext } from "react";
-import { useGetIdentity } from "@pankod/refine-core";
-import {
-    AppBar,
-    IconButton,
-    Stack,
-    Toolbar,
-    Typography,
-    Avatar,
-} from "@pankod/refine-mui";
+import { useGetIdentity } from "@refinedev/core";
+import { AppBar, IconButton, Stack, Toolbar, Typography, Avatar } from "@mui/material";
 import { DarkModeOutlined, LightModeOutlined } from "@mui/icons-material";
 
 import { ColorModeContext } from "contexts";
@@ -15,7 +8,9 @@ import { ColorModeContext } from "contexts";
 export const Header: React.FC = () => {
     const { mode, setMode } = useContext(ColorModeContext);
 
-    const { data: user } = useGetIdentity();
+    const { data: user } = useGetIdentity({
+        v3LegacyAuthProviderCompatible: true
+    });
     const shouldRenderHeader = true; // since we are using the dark/light toggle; we don't need to check if user is logged in or not.
 
     return shouldRenderHeader ? (

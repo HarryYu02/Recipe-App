@@ -1,13 +1,6 @@
 import React from "react";
-import { Link } from "@pankod/refine-react-router-v6";
-import {
-    Typography,
-    Box,
-    Card,
-    CardMedia,
-    CardContent,
-    Stack,
-} from "@pankod/refine-mui";
+import { Link } from "react-router-dom";
+import { Typography, Box, Card, CardMedia, CardContent, Stack } from "@mui/material";
 import { AccessTimeOutlined, RestaurantOutlined } from "@mui/icons-material";
 
 import { RecipeCardProps } from "interfaces/recipe";

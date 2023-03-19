@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { useGetIdentity, useOne, useUpdate } from "@pankod/refine-core";
-import { Box, Typography, Stack } from "@pankod/refine-mui";
+import { useGetIdentity, useOne, useUpdate } from "@refinedev/core";
+import { Box, Typography, Stack } from "@mui/material";
 import { Add, Remove } from "@mui/icons-material";
 import dayjs from "dayjs";
 import isBetweenPlugin from "dayjs/plugin/isBetween";
@@ -18,7 +18,9 @@ function MealPlan() {
     const [showRemove, setShowRemove] = useState(false);
     const [viewDate, setViewDate] = useState(dayjs());
     const { mutate: update } = useUpdate();
-    const { data: user } = useGetIdentity();
+    const { data: user } = useGetIdentity({
+        v3LegacyAuthProviderCompatible: true
+    });
     const { data, isLoading, isError } = useOne({
         resource: "users",
         id: user?.userId,

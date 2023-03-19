@@ -1,7 +1,7 @@
 import React from "react";
-import { useOne } from "@pankod/refine-core";
-import { useParams } from "@pankod/refine-react-router-v6";
-import { Box, CircularProgress } from "@pankod/refine-mui";
+import { useOne } from "@refinedev/core";
+import { useParams } from "react-router-dom";
+import { Box, CircularProgress } from "@mui/material";
 
 import { Profile, Loading } from "components";
 

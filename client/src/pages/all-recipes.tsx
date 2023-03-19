@@ -1,14 +1,7 @@
 import { useMemo } from "react";
-import { useTable } from "@pankod/refine-core";
-import {
-    Box,
-    Stack,
-    Typography,
-    TextField,
-    Select,
-    MenuItem,
-} from "@pankod/refine-mui";
-import { useNavigate } from "@pankod/refine-react-router-v6";
+import { useTable } from "@refinedev/core";
+import { Box, Stack, Typography, TextField, Select, MenuItem } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 import { RecipeCard, CustomButton, Loading } from "components";
 
@@ -21,8 +14,8 @@ const AllRecipes = () => {
         setCurrent,
         setPageSize,
         pageCount,
-        sorter,
-        setSorter,
+        sorters: sorter,
+        setSorters: setSorter,
         filters,
         setFilters,
     } = useTable();

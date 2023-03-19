@@ -1,18 +1,7 @@
 import { useState, useEffect } from "react";
-import {
-    Typography,
-    Box,
-    Stack,
-    IconButton,
-} from "@pankod/refine-mui";
-import {
-    useDelete,
-    useGetIdentity,
-    useShow,
-    useOne,
-    useUpdate,
-} from "@pankod/refine-core";
-import { useParams, useNavigate } from "@pankod/refine-react-router-v6";
+import { Typography, Box, Stack, IconButton } from "@mui/material";
+import { useDelete, useGetIdentity, useShow, useOne, useUpdate } from "@refinedev/core";
+import { useParams, useNavigate } from "react-router-dom";
 import {
     Delete,
     Edit,
@@ -35,7 +24,9 @@ function checkImage(url: any) {
 
 function RecipeDetails() {
     const navigate = useNavigate();
-    const { data: user } = useGetIdentity();
+    const { data: user } = useGetIdentity({
+        v3LegacyAuthProviderCompatible: true
+    });
     const { id } = useParams();
     const { mutate } = useDelete();
     const { mutate: update } = useUpdate();

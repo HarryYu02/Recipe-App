@@ -1,12 +1,9 @@
 import React from "react";
 import { useState } from "react";
-import { useGetIdentity } from "@pankod/refine-core";
-import {
-    FieldValues,
-    useForm,
-    useFieldArray,
-    Controller,
-} from "@pankod/refine-react-hook-form";
+import { useGetIdentity } from "@refinedev/core";
+import { useForm } from "@refinedev/react-hook-form";
+import { FieldValues, useFieldArray, Controller } from "react-hook-form";
+
 import {
     Box,
     Typography,
@@ -22,7 +19,8 @@ import {
     ListItemText,
     ListItemSecondaryAction,
     IconButton,
-} from "@pankod/refine-mui";
+} from "@mui/material";
+
 import { Add, Delete } from "@mui/icons-material";
 
 import { Ingredient } from "interfaces/common";
@@ -49,7 +47,9 @@ const defaultValues = {
 };
 
 function CreateRecipe() {
-    const { data: user } = useGetIdentity();
+    const { data: user } = useGetIdentity({
+        v3LegacyAuthProviderCompatible: true
+    });
     const [recipeImage, setRecipeImage] = useState({
         name: "",
         url: "",

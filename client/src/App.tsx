@@ -1,14 +1,8 @@
 import React from "react";
 
-import { Refine, AuthProvider } from "@pankod/refine-core";
-import {
-    notificationProvider,
-    RefineSnackbarProvider,
-    CssBaseline,
-    GlobalStyles,
-    ReadyPage,
-    ErrorComponent,
-} from "@pankod/refine-mui";
+import { Refine, LegacyAuthProvider as AuthProvider } from "@refinedev/core";
+import { notificationProvider, RefineSnackbarProvider, ReadyPage, ErrorComponent } from "@refinedev/mui";
+import { CssBaseline, GlobalStyles } from "@mui/material";
 import {
     BookOutlined,
     StarBorderOutlined,
@@ -17,9 +11,9 @@ import {
     AccountCircleOutlined,
 } from "@mui/icons-material";
 
-import dataProvider from "@pankod/refine-simple-rest";
-import { MuiInferencer } from "@pankod/refine-inferencer/mui";
-import routerProvider from "@pankod/refine-react-router-v6";
+import dataProvider from "@refinedev/simple-rest";
+import { MuiInferencer } from "@refinedev/inferencer/mui";
+import routerProvider from "@refinedev/react-router-v6/legacy";
 import axios, { AxiosRequestConfig } from "axios";
 import { ColorModeContextProvider } from "contexts";
 import { Title, Sider, Layout, Header } from "components/layout";
@@ -152,7 +146,7 @@ function App() {
                         },
                         {
                             name: "saved",
-                            options: {
+                            meta: {
                                 label: "Saved",
                             },
                             list: SavedRecipes,
@@ -160,7 +154,7 @@ function App() {
                         },
                         {
                             name: "meal-plan",
-                            options: {
+                            meta: {
                                 label: "Meal Plan",
                             },
                             list: MealPlan,
@@ -168,7 +162,7 @@ function App() {
                         },
                         {
                             name: "shopping-list",
-                            options: {
+                            meta: {
                                 label: "Shopping List",
                             },
                             list: ShoppingList, 
@@ -176,7 +170,7 @@ function App() {
                         },
                         {
                             name: "profile",
-                            options: { 
+                            meta: { 
                                 label: "Profile",
                             },
                             list: MyProfile,
@@ -188,8 +182,8 @@ function App() {
                     Sider={Sider}
                     Layout={Layout}
                     Header={Header}
-                    routerProvider={routerProvider}
-                    authProvider={authProvider}
+                    legacyRouterProvider={routerProvider}
+                    legacyAuthProvider={authProvider}
                     LoginPage={Login}
                     DashboardPage={Home}
                 />
