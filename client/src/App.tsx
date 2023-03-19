@@ -63,7 +63,7 @@ function App() {
             // Save user to MongoDB
             if (profileObj) {
                 const response = await fetch(
-                    "http://localhost:8080/api/v1/users",
+                    `https://letem-cook-backend.onrender.com/api/v1/users`,
                     {
                         method: "POST",
                         headers: {
@@ -136,7 +136,7 @@ function App() {
             <RefineSnackbarProvider>
                 <Refine
                     dataProvider={dataProvider(
-                        "http://localhost:8080/api/v1"
+                        "https://letem-cook-backend.onrender.com/api/v1"
                     )}
                     notificationProvider={notificationProvider}
                     ReadyPage={ReadyPage}
