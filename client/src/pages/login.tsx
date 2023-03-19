@@ -69,7 +69,7 @@ export const Login: React.FC = () => {
           }}
         >
           <div>
-            <img src={logoNoBackground} alt="Refine Logo" height="50%"/>
+            <img src={logoNoBackground} alt="Refine Logo" width='100%'/>
           </div>
           <Box mt={4}>
             <GoogleButton />
