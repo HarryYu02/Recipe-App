@@ -19,21 +19,33 @@ Let'em Cook offers a variety of features, including:
 
 Here are a few screenshots of the Let'em Cook app in action:
 
-#### Home page
+#### Login page
 
-![Home page](https://chat.openai.com/chat/screenshots/home.png)
+![login](https://user-images.githubusercontent.com/73459064/226227457-8e5f0202-6fac-4d30-8ecc-e8caf1348001.jpg)
+
+#### All recipes page
+
+![all-recipes](https://user-images.githubusercontent.com/73459064/226227295-5fe1fb70-c899-4539-9ceb-3bb651187bf2.jpg)
 
 #### Recipe details page
 
-![Recipe details page](https://chat.openai.com/chat/screenshots/recipe.png)
+![recipe-details](https://user-images.githubusercontent.com/73459064/226227327-a67a4e65-f0bd-4693-8e2e-5ba597182ab4.jpg)
+
+#### Saved recipes page
+
+![saved](https://user-images.githubusercontent.com/73459064/226227421-18aef499-61b5-4b6f-ac42-f336a4e760b3.jpg)
 
 #### Meal plan page
 
-![Meal plan page](https://chat.openai.com/chat/screenshots/meal-plan.png)
+![meal-plan](https://user-images.githubusercontent.com/73459064/226227337-e75143b6-5ec8-4a7e-bdd0-9c8f338c6fa9.jpg)
+
+#### Shopping list page
+
+![shopping-list](https://user-images.githubusercontent.com/73459064/226227535-69307000-3366-4743-a810-019da06d175f.jpg)
 
 #### Profile page
 
-![Profile page](https://chat.openai.com/chat/screenshots/profile.png)
+![profile](https://user-images.githubusercontent.com/73459064/226227365-7396ce23-973b-41f1-9e54-d2ad234fdf4e.jpg)
 
 ## Technologies Used
 
@@ -77,21 +89,21 @@ If you want to run it on your local machine, please follow the steps below.
 
 2.  Install frontend dependencies
 
-	`cd frontend`
+	`cd frontend`  
 	`npm install` 
 
 3.  Install backend dependencies
 
-	`cd ../backend`
+	`cd ../backend`  
 	`npm install` 
 
 4.  Set up environment variables
 	-   Create a `.env` file in the backend directory with the following variables:
 
-		`MONGODB_URI=<your-mongodb-uri>`
-		`CLOUDINARY_CLOUD_NAME=<your-cloudinary-cloud-name>`
-		`CLOUDINARY_API_KEY=<your-cloudinary-api-key>`
-		`CLOUDINARY_API_SECRET=<your-cloudinary-api-secret>` 
+		`MONGODB_URI=<your-mongodb-uri>`  
+		`CLOUDINARY_CLOUD_NAME=<your-cloudinary-cloud-name>`  
+		`CLOUDINARY_API_KEY=<your-cloudinary-api-key>`  
+		`CLOUDINARY_API_SECRET=<your-cloudinary-api-secret>`   
 		`PORT=8080<or-port-of-your-choice>`
 
 	-   Create a `.env.local` file in the frontend directory with the following variables:
@@ -102,12 +114,12 @@ If you want to run it on your local machine, please follow the steps below.
 
 6.  Start the backend server
 
-	`cd server`
+	`cd server`  
 	`npm run start` 
 
 7.  Start the frontend server
 
-	`cd ../client`
+	`cd ../client`  
 	`npm run dev` 
 
 8.  Open [http://localhost:3000](http://localhost:3000/) in your browser to see the app
