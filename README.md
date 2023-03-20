@@ -89,12 +89,12 @@ If you want to run it on your local machine, please follow the steps below.
 
 2.  Install frontend dependencies
 
-	`cd frontend`  
+	`cd client`  
 	`npm install` 
 
 3.  Install backend dependencies
 
-	`cd ../backend`  
+	`cd ../server`  
 	`npm install` 
 
 4.  Set up environment variables
