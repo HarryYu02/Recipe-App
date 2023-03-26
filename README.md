@@ -79,7 +79,6 @@ If you want to run it on your local machine, please follow the steps below.
 ### Prerequisites
 
 -   [Node.js](https://nodejs.org/en/) v14 or higher installed on your machine
--   [MongoDB](https://www.mongodb.com/) set up and running
 
 ### Installation
 
