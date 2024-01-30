@@ -45,7 +45,7 @@ Here are a few screenshots of the Let'em Cook app in action:
 
 #### Profile page
 
-![profile](https://user-images.githubusercontent.com/73459064/226227365-7396ce23-973b-41f1-9e54-d2ad234fdf4e.jpg)
+![profile](https://github.com/HarryYu02/Recipe-App/assets/73459064/701afb6a-914d-47c8-a703-cc89ef556d38)
 
 ## Technologies Used
 
