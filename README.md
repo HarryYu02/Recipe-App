@@ -129,5 +129,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
--   Email: [yupakhei456@gmail.com](mailto:youremail@example.com)
--   GitHub: [https://github.com/HarryYu02](https://github.com/%7Busername%7D)
+-   Email: [harryyu02@gmail.com](mailto:harryyu02@gmail.com)
+-   GitHub: [https://github.com/HarryYu02](https://github.com/HarryYu02)
